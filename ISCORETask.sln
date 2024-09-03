@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISCORETask.API", "ISCORETask\ISCORETask.API.csproj", "{6C9BE765-4F6C-48AA-A4E0-56A7716CC404}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISCORETask.Core", "ISCORETask.Core\ISCORETask.Core.csproj", "{EF836E39-5469-4A75-8BE2-CFDE6F3F1965}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISCORETask.DAL", "ISCORETask.DAL\ISCORETask.DAL.csproj", "{F1ACEE07-4D98-44DA-A848-2DA7A5780748}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISCORETask.DTOs", "ISCORETask.DTOs\ISCORETask.DTOs.csproj", "{3F2ABF63-FABB-4E3D-A377-A53B2F0F71AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISCORETask.Objects", "ISCORETask.Objects\ISCORETask.Objects.csproj", "{4AF28AC2-F80F-47AE-8281-B2F07337E693}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISCORETask.Services", "ISCORETask.Services\ISCORETask.Services.csproj", "{59E9C391-7DCD-461E-B5A0-BFD2FA19D45F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6C9BE765-4F6C-48AA-A4E0-56A7716CC404}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C9BE765-4F6C-48AA-A4E0-56A7716CC404}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C9BE765-4F6C-48AA-A4E0-56A7716CC404}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C9BE765-4F6C-48AA-A4E0-56A7716CC404}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF836E39-5469-4A75-8BE2-CFDE6F3F1965}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF836E39-5469-4A75-8BE2-CFDE6F3F1965}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF836E39-5469-4A75-8BE2-CFDE6F3F1965}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF836E39-5469-4A75-8BE2-CFDE6F3F1965}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1ACEE07-4D98-44DA-A848-2DA7A5780748}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1ACEE07-4D98-44DA-A848-2DA7A5780748}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1ACEE07-4D98-44DA-A848-2DA7A5780748}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1ACEE07-4D98-44DA-A848-2DA7A5780748}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F2ABF63-FABB-4E3D-A377-A53B2F0F71AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F2ABF63-FABB-4E3D-A377-A53B2F0F71AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F2ABF63-FABB-4E3D-A377-A53B2F0F71AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F2ABF63-FABB-4E3D-A377-A53B2F0F71AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AF28AC2-F80F-47AE-8281-B2F07337E693}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AF28AC2-F80F-47AE-8281-B2F07337E693}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AF28AC2-F80F-47AE-8281-B2F07337E693}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AF28AC2-F80F-47AE-8281-B2F07337E693}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59E9C391-7DCD-461E-B5A0-BFD2FA19D45F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59E9C391-7DCD-461E-B5A0-BFD2FA19D45F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59E9C391-7DCD-461E-B5A0-BFD2FA19D45F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59E9C391-7DCD-461E-B5A0-BFD2FA19D45F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2870CAB9-085C-4DFA-B0A8-B59E9800CFE6}
+	EndGlobalSection
+EndGlobal
