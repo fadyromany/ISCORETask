@@ -28,7 +28,7 @@ namespace ISCORETask.API.Extensions.Filters
                     //}
                     //else
                     //{
-                        baseController.UserId = identity.FindFirst("userId").Value;
+                        baseController.UserId = identity.FindFirst("Id").Value;
 
                     //}
                 }
