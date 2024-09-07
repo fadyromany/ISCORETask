@@ -7,12 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ISCORETask.Services
+namespace ISCORETask.Services.Abstractions
 {
     public interface IAccountService
     {
         Task<bool> CheckUserExist(RegisterDto model);
-        Task<(ErrorResponse,string?)> Register(RegisterDto model);
-        Task<(ErrorResponse,UserResponse)> Login(LoginDto model);
+        Task<(ErrorResponse, string?)> Register(RegisterDto model);
+        Task<(ErrorResponse, UserResponse)> Login(LoginDto model);
     }
 }

@@ -1,6 +1,6 @@
 ﻿using ISCORETask.DTOs;
 using ISCORETask.DTOs.Request;
-using ISCORETask.Services;
+using ISCORETask.Services.Abstractions;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,7 +10,7 @@ namespace ISCORETask.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AccountController : ControllerBase
+    public class AccountController : ApiBaseController
     {
         private readonly IAccountService _accountService;
         private readonly IConfiguration _configuration;

@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using ISCORETask.DAL.Repository.Abstractions;
+using ISCORETask.DAL.Repository.Implementations;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +14,8 @@ namespace ISCORETask.DAL
         public static void RegisterRepositories(this IServiceCollection services)
         {
             services.AddScoped<IAccountRepository, AccountRepository>();
+            services.AddScoped<IBookRepository, BookRepository>();
+
         }
     }
 }

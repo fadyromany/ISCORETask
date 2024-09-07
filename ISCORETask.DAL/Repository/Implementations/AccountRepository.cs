@@ -1,4 +1,5 @@
 ﻿using ISCORETask.Core.Context;
+using ISCORETask.DAL.Repository.Abstractions;
 using ISCORETask.DTOs.Common;
 using Microsoft.AspNetCore.Identity;
 using System;
@@ -7,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ISCORETask.DAL
+namespace ISCORETask.DAL.Repository.Implementations
 {
     public class AccountRepository : IAccountRepository
     {
@@ -28,10 +29,10 @@ namespace ISCORETask.DAL
         #endregion
 
         #region Methods
-        public async Task <bool> UserExist(string email)
+        public async Task<bool> UserExist(string email)
         {
-           var existingUser= await _userManager.FindByEmailAsync(email);
-           return existingUser==null ? false:true;
+            var existingUser = await _userManager.FindByEmailAsync(email);
+            return existingUser == null ? false : true;
         }
 
         public async Task<(ErrorResponse, IdentityUser user)> Register(IdentityUser user, string password)
@@ -70,10 +71,10 @@ namespace ISCORETask.DAL
             }
             if (result.IsNotAllowed)
             {
-                return (new ErrorResponse { Code=400,Title = "User is not allowed to sign in." }, null);
+                return (new ErrorResponse { Code = 400, Title = "User is not allowed to sign in." }, null);
             }
-            
-                return (new ErrorResponse() { Code = 400, Title = "Invalid UserName Or Password" }, null);
+
+            return (new ErrorResponse() { Code = 400, Title = "Invalid UserName Or Password" }, null);
         }
         #endregion
 

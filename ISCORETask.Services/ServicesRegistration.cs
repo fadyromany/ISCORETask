@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using ISCORETask.Services.Abstractions;
+using ISCORETask.Services.Implementations;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +14,7 @@ namespace ISCORETask.Services
         public static void RegisterServices(this IServiceCollection services)
         {
             services.AddScoped<IAccountService, AccountService>();
+            services.AddScoped<IBookService, BookService>();
         }
     }
 }

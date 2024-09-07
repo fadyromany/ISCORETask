@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ISCORETask.DAL
+namespace ISCORETask.DAL.Repository.Abstractions
 {
     public interface IAccountRepository
     {

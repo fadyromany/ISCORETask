@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
+using ISCORETask.DAL.Repository.Abstractions;
+using ISCORETask.Objects;
 
 namespace ISCORETask.DAL
 {
@@ -12,6 +14,16 @@ namespace ISCORETask.DAL
             : base(options)
         {
         }
+        public DbSet<BookVM> Books { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<BookVM>()
+                .ToTable("Books", "BookManagement");
+        }
+
     }
     public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<ISCORETaskDbContext>
     {

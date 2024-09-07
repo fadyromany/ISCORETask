@@ -1,7 +1,8 @@
-﻿using ISCORETask.DAL;
+﻿using ISCORETask.DAL.Repository.Abstractions;
 using ISCORETask.DTOs.Common;
 using ISCORETask.DTOs.Request;
 using ISCORETask.DTOs.Response;
+using ISCORETask.Services.Abstractions;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
@@ -14,7 +15,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ISCORETask.Services
+namespace ISCORETask.Services.Implementations
 {
     public class AccountService : IAccountService
     {
@@ -95,8 +96,8 @@ namespace ISCORETask.Services
             {
                 Subject = new ClaimsIdentity(new Claim[]
                 {
-                new Claim(ClaimTypes.Name, user.UserName),
-                new Claim(ClaimTypes.Email, user.Email)
+                new Claim(ClaimTypes.Email, user.Email),
+                new Claim("userId", user.Id.ToString())
                 }),
                 Expires = DateTime.UtcNow.AddHours(1),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature),

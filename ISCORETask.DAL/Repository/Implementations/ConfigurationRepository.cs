@@ -1,11 +1,12 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using ISCORETask.DAL.Repository.Abstractions;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ISCORETask.DAL
+namespace ISCORETask.DAL.Repository.Implementations
 {
     public class ConfigurationRepository : IConfigurationRepository
     {
@@ -16,6 +17,6 @@ namespace ISCORETask.DAL
             this.configuration = configuration;
             connectionString = this.configuration.GetSection("ConnectionStrings").GetSection("DefaultConnection").Value;
         }
-        public string ConnectionString { get { return this.connectionString; } }
+        public string ConnectionString { get { return connectionString; } }
     }
 }
