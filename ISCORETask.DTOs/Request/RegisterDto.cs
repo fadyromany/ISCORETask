@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace ISCORETask.DTOs.Request
 {
@@ -11,6 +12,7 @@ namespace ISCORETask.DTOs.Request
         [Required(ErrorMessage = "incomplete.parameter")]
         public string MobileNumber { get; set; }
         [Required(ErrorMessage = "incomplete.parameter")]
+        [PasswordPropertyText(true)]
         public string Password { get; set; }
 
     }

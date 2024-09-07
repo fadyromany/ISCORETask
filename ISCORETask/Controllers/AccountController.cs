@@ -1,5 +1,6 @@
 ﻿using ISCORETask.DTOs;
 using ISCORETask.DTOs.Request;
+using ISCORETask.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,41 +12,29 @@ namespace ISCORETask.API.Controllers
     [ApiController]
     public class AccountController : ControllerBase
     {
-        private readonly UserManager<IdentityUser> _userManager;
-        private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly IAccountService _accountService;
         private readonly IConfiguration _configuration;
-        public AccountController(UserManager<IdentityUser> userManager, RoleManager<IdentityRole> roleManager, IConfiguration configuration)
+        public AccountController(IConfiguration configuration, IAccountService accountService)
         {
-            _userManager = userManager;
-            _roleManager = roleManager;
             _configuration = configuration;
+            _accountService = accountService;
         }
 
 
 
         [HttpPost("register")]
-        public async Task<IActionResult> Register([FromBody]RegisterDto registerDto)
+        public async Task<IActionResult> Register([FromBody] RegisterDto registerDto)
         {
-            if (await _accountService.UserExists(registerDto.Username))
-                _userManager.
-
-
+            var (error, reponse) = await _accountService.Register(registerDto);
+            return error != null ? BadRequest(error) : Ok(reponse);
         }
-        //{
-        //    if (await _accountService.UserExists(registerDto.Username))
-        //    {
-        //        return BadRequest("Username is taken");
-        //    }
 
-        //    var user = await _accountService.Register(registerDto);
-        //    if (user == null)
-        //    {
-        //        return BadRequest("Failed to register");
-        //    }
-
-        //    var token = _tokenService.CreateToken(user);
-        //    return Ok();
-        //}
+        [HttpPost("login")]
+        public async Task<IActionResult> Login([FromBody] LoginDto loginDto)
+        {
+            var (error, reponse) = await _accountService.Login(loginDto);
+            return error != null ? BadRequest(error) : Ok(reponse);
+        }
 
     }
 }
