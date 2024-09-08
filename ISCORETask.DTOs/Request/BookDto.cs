@@ -9,6 +9,7 @@ namespace ISCORETask.DTOs.Request
 {
     public class BookDto
     {
+        public int? Id { get; set; }
         [Required(ErrorMessage = "Title is required.")]
         [StringLength(256, ErrorMessage = "Title length cannot exceed 256 characters.")]
         public string Title { get; set; }
@@ -25,7 +26,7 @@ namespace ISCORETask.DTOs.Request
         public int Quantity { get; set; }
 
         [Required(ErrorMessage = "Publication Date is required.")]
-        [DataType(DataType.Date)]
+        [DataType(DataType.DateTime)]
         public DateTime PublicationDate { get; set; }
 
 

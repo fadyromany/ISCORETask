@@ -2,6 +2,7 @@ using ISCORETask.API.Extensions.Filters;
 using ISCORETask.Core.Context;
 using ISCORETask.DAL;
 using ISCORETask.Services;
+using ISCORETask.Services.Mappers;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -74,6 +75,7 @@ builder.Services.AddSingleton<ISCOREContext>();
 builder.Services.RegisterServices();
 builder.Services.RegisterRepositories();
 builder.Services.AddScoped<AuthnticationFilter>();
+builder.Services.AddAutoMapper(typeof(MapperWrapper));
 
 var app = builder.Build();
 

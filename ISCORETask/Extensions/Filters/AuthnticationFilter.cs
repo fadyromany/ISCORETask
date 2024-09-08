@@ -21,16 +21,9 @@ namespace ISCORETask.API.Extensions.Filters
 
                     var identity = context.HttpContext.User.Identity as ClaimsIdentity;
                     baseController.UserId = identity.FindFirst("Id").Value;
-                    //if (deleteduser.isDeleted(baseController.MobileToken))
-                    //{
-                    //    context.HttpContext.Response.StatusCode = 401;
-                    //    throw new UnauthorizedAccessException("You Are Not Authorized !");
-                    //}
-                    //else
-                    //{
-                        baseController.UserId = identity.FindFirst("Id").Value;
 
-                    //}
+                    //baseController.UserId = identity.FindFirst("Id").Value;
+
                 }
                 catch
                 {
